@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M.A Global Corporation — Import-Export, Location de Véhicules &amp; Engins, Sécurité, Logistique | Niamey, Niger</title>
+<meta name="description" content="M.A Global Corporation — partenaire stratégique multiservices à Niamey, Niger : import-export, commerce général, location de véhicules de luxe et d'engins lourds, sécurité, équipements, logistique.">
+<meta property="og:title" content="M.A Global Corporation">
+<meta property="og:description" content="Votre partenaire stratégique pour le commerce, la logistique et les services professionnels en Afrique de l'Ouest.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+:root{
+  --navy:#0B1F3A;
+  --navy-deep:#071527;
+  --green:#58B947;
+  --green-deep:#3E8C33;
+  --white:#FFFFFF;
+  --ink:#232B33;
+  --paper:#F4F6F5;
+  --line:rgba(11,31,58,.12);
+  --serif:'Fraunces', serif;
+  --sans:'Archivo', sans-serif;
+  --mono:'Space Mono', monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--sans);
+  color:var(--ink);
+  background:var(--paper);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+.container{max-width:1240px;margin:0 auto;padding:0 32px;}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms !important;transition-duration:.01ms !important;}}
+::selection{background:var(--green);color:var(--white);}
+
+/* eyebrow / manifest label motif — signature element */
+.stamp{
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:var(--green);
+}
+.stamp::before{
+  content:"";
+  width:26px;height:1px;background:var(--green);
+}
+
+/* ---------- NAV ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:22px 0;
+  transition:background .4s ease, padding .4s ease, box-shadow .4s ease;
+}
+header.scrolled{
+  background:rgba(11,31,58,.92);
+  backdrop-filter:blur(10px);
+  padding:14px 0;
+  box-shadow:0 8px 30px rgba(0,0,0,.15);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;}
+.brand{display:flex;align-items:center;gap:12px;color:var(--white);}
+.brand img{height:42px;width:42px;border-radius:50%;object-fit:cover;background:#fff;}
+.brand .brand-text{font-family:var(--serif);font-weight:600;font-size:18px;line-height:1.1;letter-spacing:.01em;}
+.brand .brand-text span{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.2em;color:var(--green);margin-top:2px;}
+nav ul{list-style:none;display:flex;gap:36px;}
+nav a{color:rgba(255,255,255,.82);font-size:13.5px;letter-spacing:.02em;font-weight:500;position:relative;padding-bottom:4px;}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--green);transition:width .3s ease;}
+nav a:hover{color:#fff;}
+nav a:hover::after{width:100%;}
+.nav-cta{
+  background:var(--green);color:var(--navy-deep);
+  padding:11px 22px;border-radius:2px;
+  font-size:13px;font-weight:700;letter-spacing:.02em;
+  transition:background .3s ease, transform .3s ease;
+}
+.nav-cta:hover{background:#fff;transform:translateY(-2px);}
+.burger{display:none;}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:flex-end;
+  background:linear-gradient(180deg, rgba(7,21,39,.55) 0%, rgba(7,21,39,.35) 40%, rgba(7,21,39,.94) 92%), url('images/security.jpg') center 20%/cover no-repeat;
+  padding-bottom:110px;
+}
+.hero::before{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(115deg, rgba(11,31,58,.88) 0%, rgba(11,31,58,.55) 38%, transparent 62%);
+}
+.hero-inner{position:relative;z-index:2;width:100%;}
+.hero .stamp{color:var(--green);margin-bottom:22px;}
+.hero .stamp span{color:rgba(255,255,255,.6);}
+h1.hero-title{
+  font-family:var(--serif);
+  color:#fff;
+  font-weight:600;
+  font-size:clamp(40px,6.4vw,86px);
+  line-height:1.02;
+  letter-spacing:-.01em;
+  max-width:900px;
+}
+h1.hero-title em{
+  font-style:italic;font-weight:300;color:var(--green);
+}
+.hero-sub{
+  color:rgba(255,255,255,.82);
+  font-size:18px;
+  max-width:560px;
+  margin:26px 0 44px;
+  line-height:1.6;
+  font-weight:400;
+}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:16px 28px;font-size:14px;font-weight:700;letter-spacing:.02em;
+  border-radius:2px;transition:all .35s cubic-bezier(.22,1,.36,1);
+  cursor:pointer;border:1px solid transparent;
+}
+.btn-primary{background:var(--green);color:var(--navy-deep);}
+.btn-primary:hover{background:#fff;transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.25);}
+.btn-outline{border-color:rgba(255,255,255,.4);color:#fff;}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08);transform:translateY(-3px);}
+.hero-coords{
+  position:absolute;bottom:36px;right:32px;z-index:2;
+  color:rgba(255,255,255,.55);font-family:var(--mono);font-size:11px;
+  letter-spacing:.08em;text-align:right;line-height:1.8;
+}
+@media(max-width:720px){.hero-coords{display:none}}
+
+/* marquee ticker of activities under hero */
+.ticker-wrap{background:var(--navy-deep);overflow:hidden;padding:14px 0;border-top:1px solid rgba(255,255,255,.08);}
+.ticker{display:flex;white-space:nowrap;animation:ticker 32s linear infinite;}
+.ticker span{
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.55);padding:0 28px;border-right:1px solid rgba(255,255,255,.14);
+}
+.ticker span b{color:var(--green);font-weight:700;}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- SECTION shared ---------- */
+section{position:relative;padding:130px 0;}
+.section-head{max-width:640px;margin-bottom:70px;}
+.section-head .stamp{margin-bottom:18px;color:var(--green-deep);}
+.section-head h2{
+  font-family:var(--serif);font-weight:600;font-size:clamp(30px,4vw,50px);
+  color:var(--navy);line-height:1.08;letter-spacing:-.01em;
+}
+.section-head p{margin-top:20px;font-size:16.5px;line-height:1.7;color:#4a5561;}
+.dark{background:var(--navy);color:#fff;}
+.dark .section-head h2{color:#fff;}
+.dark .section-head p{color:rgba(255,255,255,.68);}
+
+/* ---------- ABOUT ---------- */
+.about{background:var(--white);}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:start;}
+.about-copy p{font-size:16.5px;line-height:1.85;color:#3d4653;margin-bottom:22px;}
+.about-copy p:first-of-type{font-family:var(--serif);font-size:23px;line-height:1.5;color:var(--navy);font-weight:500;}
+.about-figure{position:relative;}
+.about-figure img{width:100%;border-radius:2px;filter:grayscale(15%);}
+.about-figure .frame-tag{
+  position:absolute;bottom:-24px;left:-24px;background:var(--green);color:var(--navy-deep);
+  padding:18px 22px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  max-width:220px;line-height:1.6;box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:50px;}.about-figure .frame-tag{position:static;margin-top:20px;max-width:none;}}
+
+/* ---------- SERVICES ---------- */
+.services{background:var(--paper);}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.svc-card{
+  background:var(--white);padding:38px 30px 34px;min-height:230px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  transition:background .35s ease, transform .35s ease;
+  position:relative;overflow:hidden;
+}
+.svc-card::before{
+  content:"";position:absolute;inset:0;background:var(--navy);
+  transform:translateY(100%);transition:transform .45s cubic-bezier(.22,1,.36,1);z-index:0;
+}
+.svc-card:hover::before{transform:translateY(0);}
+.svc-card > *{position:relative;z-index:1;}
+.svc-num{font-family:var(--mono);font-size:12px;color:var(--green-deep);transition:color .35s ease;}
+.svc-card:hover .svc-num{color:var(--green);}
+.svc-icon{width:38px;height:38px;margin:18px 0 16px;color:var(--navy);transition:color .35s ease;}
+.svc-card:hover .svc-icon{color:var(--green);}
+.svc-icon svg{width:100%;height:100%;}
+.svc-title{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--navy);transition:color .35s ease;line-height:1.3;}
+.svc-card:hover .svc-title{color:#fff;}
+.svc-desc{font-size:13.5px;color:#6b7480;margin-top:10px;line-height:1.6;transition:color .35s ease;}
+.svc-card:hover .svc-desc{color:rgba(255,255,255,.72);}
+@media(max-width:980px){.svc-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.svc-grid{grid-template-columns:1fr;}}
+
+/* ---------- WHY ---------- */
+.why{background:var(--navy);}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:10px;}
+.why-item{padding:34px 8px 34px 0;border-top:1px solid rgba(255,255,255,.14);}
+.why-item .n{font-family:var(--mono);font-size:12px;color:var(--green);}
+.why-item h3{font-family:var(--serif);font-size:21px;font-weight:600;margin:14px 0 10px;}
+.why-item p{font-size:14px;color:rgba(255,255,255,.62);line-height:1.6;}
+@media(max-width:820px){.why-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.why-grid{grid-template-columns:1fr;}}
+
+/* ---------- STATS ---------- */
+.stats{background:var(--green);color:var(--navy-deep);padding:80px 0;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:left;}
+.stat b{font-family:var(--serif);font-size:clamp(38px,4.6vw,58px);font-weight:600;display:block;line-height:1;}
+.stat span{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;display:block;margin-top:12px;opacity:.85;}
+@media(max-width:760px){.stats-grid{grid-template-columns:1fr 1fr;gap:36px;}}
+
+/* ---------- GALLERY ---------- */
+.gallery{background:var(--white);}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.gal-item{position:relative;overflow:hidden;border-radius:2px;aspect-ratio:4/5;cursor:pointer;}
+.gal-item:nth-child(1){grid-column:span 2;aspect-ratio:16/10;}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.22,1,.36,1);}
+.gal-item:hover img{transform:scale(1.08);}
+.gal-overlay{
+  position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(7,21,39,.92) 100%);
+  display:flex;align-items:flex-end;padding:24px;
+}
+.gal-overlay span{color:#fff;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;}
+.gal-overlay b{display:block;color:#fff;font-family:var(--serif);font-size:20px;font-weight:600;margin-top:6px;}
+@media(max-width:760px){.gal-grid{grid-template-columns:1fr 1fr;}.gal-item:nth-child(1){grid-column:span 2;}}
+@media(max-width:520px){.gal-grid{grid-template-columns:1fr;}.gal-item:nth-child(1){grid-column:span 1;}}
+
+/* ---------- PROCESS ---------- */
+.process{background:var(--paper);}
+.process-list{border-top:1px solid var(--line);}
+.process-row{
+  display:grid;grid-template-columns:70px 1fr 1fr;gap:30px;align-items:center;
+  padding:26px 0;border-bottom:1px solid var(--line);
+  transition:background .3s ease;
+}
+.process-row:hover{background:rgba(88,185,71,.06);}
+.process-row .pn{font-family:var(--mono);color:var(--green-deep);font-size:14px;}
+.process-row h4{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--navy);}
+.process-row p{font-size:14px;color:#5c6673;line-height:1.6;}
+@media(max-width:700px){.process-row{grid-template-columns:40px 1fr;}.process-row p{grid-column:2;}}
+
+/* ---------- TESTIMONIALS ---------- */
+.testi{background:var(--navy-deep);color:#fff;}
+.testi-track{overflow:hidden;position:relative;margin-top:20px;}
+.testi-slide{display:none;}
+.testi-slide.active{display:block;animation:fadein .6s ease;}
+@keyframes fadein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.testi-quote{font-family:var(--serif);font-size:clamp(22px,2.6vw,32px);font-weight:400;line-height:1.5;max-width:800px;}
+.testi-who{margin-top:26px;font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;color:var(--green);text-transform:uppercase;}
+.testi-nav{display:flex;gap:14px;margin-top:44px;}
+.testi-dot{width:34px;height:2px;background:rgba(255,255,255,.25);cursor:pointer;transition:background .3s ease;}
+.testi-dot.active{background:var(--green);}
+
+/* ---------- CONTACT ---------- */
+.contact{background:var(--white);}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;}
+.contact-info h3{font-family:var(--serif);font-size:26px;color:var(--navy);margin-bottom:22px;font-weight:600;}
+.info-row{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--line);}
+.info-row:last-of-type{border-bottom:1px solid var(--line);}
+.info-row .ic{width:20px;height:20px;color:var(--green-deep);flex-shrink:0;margin-top:2px;}
+.info-row div b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-family:var(--mono);color:#8991a0;margin-bottom:4px;}
+.info-row div span{font-size:15px;color:var(--navy);font-weight:500;}
+.social-row{display:flex;gap:12px;margin-top:28px;}
+.social-row a{
+  width:42px;height:42px;border:1px solid var(--line);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;color:var(--navy);
+  transition:all .3s ease;
+}
+.social-row a:hover{background:var(--green);border-color:var(--green);color:#fff;transform:translateY(-3px);}
+.social-row svg{width:18px;height:18px;}
+
+form.qform{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.field{display:flex;flex-direction:column;gap:8px;}
+.field.full{grid-column:1/-1;}
+.field label{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8991a0;}
+.field input,.field select,.field textarea{
+  border:none;border-bottom:1.5px solid var(--line);padding:12px 2px;font-size:15px;
+  font-family:var(--sans);background:transparent;color:var(--navy);transition:border-color .3s ease;
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--green);}
+.field textarea{resize:vertical;min-height:90px;}
+form.qform button{
+  grid-column:1/-1;justify-self:start;margin-top:10px;
+  background:var(--navy);color:#fff;padding:17px 34px;border:none;border-radius:2px;
+  font-size:14px;font-weight:700;letter-spacing:.02em;cursor:pointer;transition:all .3s ease;
+}
+form.qform button:hover{background:var(--green);color:var(--navy-deep);transform:translateY(-2px);}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:50px;}form.qform{grid-template-columns:1fr;}}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--navy-deep);color:rgba(255,255,255,.6);padding:70px 0 30px;}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:60px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.1);}
+.foot-brand{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+.foot-brand img{height:40px;width:40px;border-radius:50%;background:#fff;}
+.foot-brand span{font-family:var(--serif);font-size:18px;color:#fff;font-weight:600;}
+.foot-grid p{font-size:14px;line-height:1.7;max-width:320px;}
+.foot-col h5{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:18px;}
+.foot-col a,.foot-col p{display:block;font-size:14px;margin-bottom:10px;color:rgba(255,255,255,.62);}
+.foot-col a:hover{color:#fff;}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:26px;font-size:12.5px;flex-wrap:wrap;gap:10px;}
+@media(max-width:800px){.foot-grid{grid-template-columns:1fr;gap:36px;}}
+
+/* reveal utility */
+.reveal{opacity:0;transform:translateY(28px);}
+
+/* mobile nav */
+@media(max-width:920px){
+  nav ul{display:none;}
+  .nav-cta{display:none;}
+  .burger{
+    display:flex;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px;
+  }
+  .burger span{width:24px;height:2px;background:#fff;display:block;}
+}
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="container nav-inner">
+    <a href="#top" class="brand">
+      <img src="images/logo.jpg" alt="M.A Global Corporation">
+      <div class="brand-text">M.A GLOBAL<span>CORPORATION · NIAMEY</span></div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#about">Qui sommes-nous</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#realisations">Réalisations</a></li>
+        <li><a href="#process">Processus</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="nav-cta">Demander un devis</a>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-inner container">
+    <div class="stamp">M.A GLOBAL CORPORATION <span>— NIAMEY, NIGER</span></div>
+    <h1 class="hero-title">Votre partenaire<br>stratégique pour le <em>commerce</em>,<br>la logistique &amp; les services.</h1>
+    <p class="hero-sub">Import-export, commerce général, location de véhicules et d'engins, sécurité privée, équipements et solutions logistiques — une seule entreprise, des standards internationaux.</p>
+    <div class="hero-actions">
+      <a href="#services" class="btn btn-primary">Découvrir nos services</a>
+      <a href="#contact" class="btn btn-outline">Demander un devis</a>
+    </div>
+  </div>
+  <div class="hero-coords">BP 13 624 · NIAMEY, NIGER<br>(+227) 98 80 80 01</div>
+</section>
+
+<div class="ticker-wrap">
+  <div class="ticker" id="ticker">
+    <span><b>Import — Export</b></span>
+    <span><b>Commerce Général</b></span>
+    <span><b>Location de véhicules de luxe</b></span>
+    <span><b>Location d'engins lourds</b></span>
+    <span><b>Sécurité privée</b></span>
+    <span><b>Équipements informatiques</b></span>
+    <span><b>Fournitures de bureau</b></span>
+    <span><b>Solutions logistiques</b></span>
+    <span><b>Import — Export</b></span>
+    <span><b>Commerce Général</b></span>
+    <span><b>Location de véhicules de luxe</b></span>
+    <span><b>Location d'engins lourds</b></span>
+    <span><b>Sécurité privée</b></span>
+    <span><b>Équipements informatiques</b></span>
+    <span><b>Fournitures de bureau</b></span>
+    <span><b>Solutions logistiques</b></span>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-copy reveal">
+      <div class="section-head" style="margin-bottom:34px;">
+        <div class="stamp">Qui sommes-nous</div>
+        <h2>Une entreprise nigérienne, une ambition internationale.</h2>
+      </div>
+      <p>M.A Global Corporation accompagne entreprises, ONG, institutions publiques et particuliers avec des solutions fiables, rapides et professionnelles.</p>
+      <p>Basée à Niamey, notre équipe couvre l'import-export, le commerce général, la location de véhicules et d'engins lourds, la sécurité privée et l'approvisionnement professionnel. Chaque mission est traitée avec la même exigence : qualité, rapidité, transparence.</p>
+      <p>Notre force réside dans notre capacité à connecter les marchés internationaux aux réalités locales, et à livrer des résultats concrets, à chaque étape.</p>
+    </div>
+    <div class="about-figure reveal">
+      <img src="images/founder.jpg" alt="Direction de M.A Global Corporation">
+      <div class="frame-tag">Direction générale — pilotage des opérations import-export &amp; logistique</div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="stamp">Nos Services</div>
+      <h2>Huit métiers, une seule adresse.</h2>
+      <p>Un socle de compétences complémentaires, pensé pour répondre à l'ensemble des besoins opérationnels de nos clients, sans multiplier les prestataires.</p>
+    </div>
+
+    <div class="svc-grid">
+      <div class="svc-card reveal"><div class="svc-num">01</div>
+        <div><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h18M3 6h18M3 18h18"/></svg></div>
+        <div class="svc-title">Import — Export</div>
+        <div class="svc-desc">Approvisionnement international et flux commerciaux maîtrisés de bout en bout.</div></div>
+      </div>
+      <div class="svc-card reveal"><div class="svc-num">02</div>
+        <div><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <div class="svc-title">Commerce Général</div>
+        <div class="svc-desc">Distribution et fourniture de produits variés pour entreprises et institutions.</div></div>
+      </div>
+      <div class="svc-card reveal"><div class="svc-num">03</div>
+        <div><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 16l2-6h11l3 6M5 16h14v3H5z"/><circle cx="8" cy="19" r="1.4"/><circle cx="16" cy="19" r="1.4"/></svg></div>
+        <div class="svc-title">Location de véhicules de luxe</div>
+        <div class="svc-desc">Berlines et 4x4 haut de gamme, avec chauffeur ou en location libre.</div></div>
+      </div>
+      <div class="svc-card reveal"><div class="svc-num">04</div>
+        <div><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 18l3-9h6l4 5h3v4M4 18h13"/><circle cx="8" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg></div>
+        <div class="svc-title">Location d'engins lourds</div>
+        <div class="svc-desc">Grues, engins de chantier et matériel lourd pour vos projets d'envergure.</div></div>
+      </div>
+      <div class="svc-card reveal"><div class="svc-num">05</div>
+        <div><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg></div>
+        <div class="svc-title">Sécurité privée</div>
+        <div class="svc-desc">Solutions de sécurité sur mesure pour sites, événements et personnalités.</div></div>
+      </div>
+      <div class="svc-card reveal"><div class="svc-num">06</div>
+        <div><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8M12 16v4"/></svg></div>
+        <div class="svc-title">Équipements informatiques</div>
+        <div class="svc-desc">Fourniture de matériel IT pour équiper bureaux et administrations.</div></div>
+      </div>
+      <div class="svc-card reveal"><div class="svc-num">07</div>
+        <div><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 9v11"/></svg></div>
+        <div class="svc-title">Fournitures de bureau</div>
+        <div class="svc-desc">Matériel et consommables de bureau livrés rapidement à vos équipes.</div></div>
+      </div>
+      <div class="svc-card reveal"><div class="svc-num">08</div>
+        <div><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7M12 11v10"/></svg></div>
+        <div class="svc-title">Solutions logistiques</div>
+        <div class="svc-desc">Coordination du transport et de la chaîne logistique, de A à Z.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why dark" id="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="stamp" style="color:var(--green)">Pourquoi nous choisir</div>
+      <h2>Des engagements tenus, pas seulement promis.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal"><div class="n">01</div><h3>Professionnalisme</h3><p>Une équipe formée, rigoureuse, qui traite chaque dossier avec le même sérieux.</p></div>
+      <div class="why-item reveal"><div class="n">02</div><h3>Fiabilité</h3><p>Des engagements tenus et une exécution suivie de bout en bout.</p></div>
+      <div class="why-item reveal"><div class="n">03</div><h3>Intervention rapide</h3><p>Une organisation capable de répondre vite, y compris dans l'urgence.</p></div>
+      <div class="why-item reveal"><div class="n">04</div><h3>Partenaires internationaux</h3><p>Un réseau qui connecte Niamey aux marchés régionaux et mondiaux.</p></div>
+      <div class="why-item reveal"><div class="n">05</div><h3>Solutions personnalisées</h3><p>Chaque prestation est ajustée au besoin réel du client, sans standardisation forcée.</p></div>
+      <div class="why-item reveal"><div class="n">06</div><h3>Prix compétitifs</h3><p>Une structure de coûts maîtrisée, pour un rapport qualité-prix constant.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat reveal"><b data-count="15" data-suffix="+">0</b><span>Années d'expérience</span></div>
+    <div class="stat reveal"><b data-count="500" data-suffix="+">0</b><span>Clients satisfaits</span></div>
+    <div class="stat reveal"><b data-count="1000" data-suffix="+">0</b><span>Projets réalisés</span></div>
+    <div class="stat reveal"><b style="font-size:clamp(38px,4.6vw,58px)">24/7</b><span>Support client</span></div>
+  </div>
+</section>
+
+<section class="gallery" id="realisations">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="stamp">Nos réalisations</div>
+      <h2>Des missions menées sur le terrain.</h2>
+    </div>
+    <div class="gal-grid">
+      <div class="gal-item reveal"><img src="images/crane.jpg" alt="Engins lourds"><div class="gal-overlay"><span>Engins lourds</span><b>Levage &amp; chantier</b></div></div>
+      <div class="gal-item reveal"><img src="images/cars2.jpg" alt="Location automobile"><div class="gal-overlay"><span>Location automobile</span><b>Véhicules de luxe</b></div></div>
+      <div class="gal-item reveal"><img src="images/security.jpg" alt="Sécurité"><div class="gal-overlay"><span>Sécurité</span><b>Solutions sur mesure</b></div></div>
+      <div class="gal-item reveal"><img src="images/cars1.jpg" alt="Berline et 4x4"><div class="gal-overlay"><span>Commerce</span><b>Berline, 4x4 (V8)</b></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="stamp">Processus de collaboration</div>
+      <h2>Sept étapes, un fil conducteur clair.</h2>
+    </div>
+    <div class="process-list">
+      <div class="process-row reveal"><div class="pn">01</div><h4>Prise de contact</h4><p>Vous nous exposez votre besoin, par téléphone, email ou formulaire.</p></div>
+      <div class="process-row reveal"><div class="pn">02</div><h4>Analyse du besoin</h4><p>Nous qualifions le périmètre, les délais et les contraintes du projet.</p></div>
+      <div class="process-row reveal"><div class="pn">03</div><h4>Proposition commerciale</h4><p>Un devis clair, détaillé, adapté à votre budget et à vos échéances.</p></div>
+      <div class="process-row reveal"><div class="pn">04</div><h4>Validation</h4><p>Nous ajustons puis validons ensemble les termes de la mission.</p></div>
+      <div class="process-row reveal"><div class="pn">05</div><h4>Exécution</h4><p>Notre équipe mobilise les ressources nécessaires et démarre l'exécution.</p></div>
+      <div class="process-row reveal"><div class="pn">06</div><h4>Livraison</h4><p>Remise du service ou de la marchandise dans les conditions convenues.</p></div>
+      <div class="process-row reveal"><div class="pn">07</div><h4>Suivi</h4><p>Un accompagnement post-livraison pour garantir votre satisfaction durable.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="testi dark">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:40px;">
+      <div class="stamp" style="color:var(--green)">Témoignages</div>
+      <h2>Ce que nos partenaires en disent.</h2>
+    </div>
+    <div class="testi-track">
+      <div class="testi-slide active">
+        <p class="testi-quote">"Réactivité et sérieux à chaque étape — la location de nos véhicules de direction s'est faite sans aucun accroc."</p>
+        <div class="testi-who">Directeur d'exploitation — Secteur BTP, Niamey</div>
+      </div>
+      <div class="testi-slide">
+        <p class="testi-quote">"Un partenaire fiable pour nos opérations d'approvisionnement, avec un vrai sens du service."</p>
+        <div class="testi-who">Responsable logistique — ONG internationale</div>
+      </div>
+      <div class="testi-slide">
+        <p class="testi-quote">"L'équipe sécurité mobilisée pour notre événement était professionnelle et parfaitement coordonnée."</p>
+        <div class="testi-who">Organisateur événementiel — Niamey</div>
+      </div>
+    </div>
+    <div class="testi-nav">
+      <div class="testi-dot active" data-i="0"></div>
+      <div class="testi-dot" data-i="1"></div>
+      <div class="testi-dot" data-i="2"></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <div class="stamp">Contact</div>
+      <h3 style="margin-top:18px;">Parlons de votre projet.</h3>
+      <div class="info-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.4 2.1L8 9.9a16 16 0 006 6l1.4-1.4a2 2 0 012.1-.4c.9.3 1.8.5 2.7.6a2 2 0 011.7 2.1z"/></svg></div>
+        <div><b>Téléphone</b><span>(+227) 98 80 80 01</span></div>
+      </div>
+      <div class="info-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M4 4l8 8 8-8"/></svg></div>
+        <div><b>Fax</b><span>(+227) 20 35 06 47</span></div>
+      </div>
+      <div class="info-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M4 4l8 8 8-8"/></svg></div>
+        <div><b>Email</b><span>maglobalcorporation@gmail.com</span></div>
+      </div>
+      <div class="info-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s7-6.5 7-12A7 7 0 105 10c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.4"/></svg></div>
+        <div><b>Adresse</b><span>BP 13 624 — Niamey, Niger</span></div>
+      </div>
+      <div class="social-row">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5H16l.5-3h-3V8.4c0-.87.24-1.46 1.5-1.46H16.5V4.35A20 20 0 0014.1 4.2c-2.3 0-3.9 1.4-3.9 4v2.3H7.7v3h2.5V21h3.3z"/></svg></a>
+        <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1112 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7 1-.1.1-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4.1-.1 0-.3 0-.4-.1-.1-.5-1.3-.7-1.7-.2-.5-.4-.4-.5-.4h-.5c-.1 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.9 2.2 1 2.4c.1.2 1.7 2.6 4.2 3.6.6.2 1 .4 1.4.5.6.2 1.1.1 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1 0-.1-.2-.2-.4-.3z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.3c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
+      </div>
+    </div>
+
+    <form class="qform reveal" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Demande envoyée ✓';">
+      <div class="field"><label>Nom complet</label><input type="text" required placeholder="Votre nom"></div>
+      <div class="field"><label>Téléphone</label><input type="tel" required placeholder="+227 ..."></div>
+      <div class="field"><label>Email</label><input type="email" required placeholder="vous@exemple.com"></div>
+      <div class="field">
+        <label>Service souhaité</label>
+        <select required>
+          <option value="">Sélectionner</option>
+          <option>Import — Export</option>
+          <option>Commerce Général</option>
+          <option>Location de véhicules de luxe</option>
+          <option>Location d'engins lourds</option>
+          <option>Sécurité privée</option>
+          <option>Équipements informatiques</option>
+          <option>Fournitures de bureau</option>
+          <option>Solutions logistiques</option>
+        </select>
+      </div>
+      <div class="field full"><label>Message</label><textarea placeholder="Décrivez votre besoin..."></textarea></div>
+      <button type="submit">Envoyer la demande</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpg" alt="M.A Global Corporation"><span>M.A Global Corporation</span></div>
+        <p>Votre partenaire stratégique pour le commerce, la logistique et les services professionnels — à Niamey et au-delà.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navigation</h5>
+        <a href="#about">Qui sommes-nous</a>
+        <a href="#services">Services</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h5>Coordonnées</h5>
+        <p>(+227) 98 80 80 01</p>
+        <p>maglobalcorporation@gmail.com</p>
+        <p>BP 13 624, Niamey, Niger</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 M.A Global Corporation. Tous droits réservés.</span>
+      <span>Niamey, Niger</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// header scroll state
+const header=document.getElementById('siteHeader');
+window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>40);});
+
+// GSAP reveal
+gsap.registerPlugin(ScrollTrigger);
+gsap.utils.toArray('.reveal').forEach((el,i)=>{
+  gsap.to(el,{
+    opacity:1,y:0,duration:0.9,ease:'power3.out',
+    scrollTrigger:{trigger:el,start:'top 88%'}
+  });
+});
+
+// hero entrance
+gsap.from('.hero .stamp',{opacity:0,y:16,duration:.8,delay:.2});
+gsap.from('.hero-title',{opacity:0,y:24,duration:1,delay:.35,ease:'power3.out'});
+gsap.from('.hero-sub',{opacity:0,y:16,duration:.9,delay:.55});
+gsap.from('.hero-actions',{opacity:0,y:16,duration:.9,delay:.7});
+
+// counters
+document.querySelectorAll('[data-count]').forEach(el=>{
+  const target=parseInt(el.getAttribute('data-count'));
+  const suffix=el.getAttribute('data-suffix')||'';
+  ScrollTrigger.create({
+    trigger:el,start:'top 90%',once:true,
+    onEnter:()=>{
+      let obj={val:0};
+      gsap.to(obj,{val:target,duration:1.8,ease:'power2.out',onUpdate:()=>{el.textContent=Math.floor(obj.val)+suffix;}});
+    }
+  });
+});
+
+// testimonials
+const slides=document.querySelectorAll('.testi-slide');
+const dots=document.querySelectorAll('.testi-dot');
+let ti=0;
+function showSlide(i){
+  slides.forEach(s=>s.classList.remove('active'));
+  dots.forEach(d=>d.classList.remove('active'));
+  slides[i].classList.add('active');
+  dots[i].classList.add('active');
+  ti=i;
+}
+dots.forEach(d=>d.addEventListener('click',()=>showSlide(parseInt(d.dataset.i))));
+setInterval(()=>{showSlide((ti+1)%slides.length);},5500);
+
+// smooth anchor for mobile burger (simple toggle fallback)
+document.querySelector('.burger').addEventListener('click',()=>{
+  const list=document.querySelector('nav ul');
+  const cta=document.querySelector('.nav-cta');
+  const open=list.style.display==='flex';
+  list.style.cssText=open?'':'display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:rgba(11,31,58,.98);padding:24px 32px;gap:18px;';
+  cta.style.display=open?'':'inline-flex';
+});
+</script>
+</body>
+</html>
